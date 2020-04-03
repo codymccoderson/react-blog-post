@@ -1,12 +1,14 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import BlogList from './components/BlogList';
+import BlogPost from './components/BlogPost';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello World!</h1>
-      </header>
-    </div>
+    <Router>
+      <Route path='/' exact component={BlogList}/>
+      <Route path='/posts/:{p-id}?' component={BlogPost}/>
+    </Router>
   );
 }
 
