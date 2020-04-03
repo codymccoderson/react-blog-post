@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Route path='/' exact component={BlogList}/>
-      <Route path='/posts/:{p_id}?' component={BlogPost}/>
+      <Route path='/posts/:id?' component={BlogPost}/>
     </Router>
   );
 }
