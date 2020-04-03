@@ -16,11 +16,12 @@ class BlogPost extends Component {
         const PostId = this.props.match.params.p_id;
         const url = `http://localhost:3000/v1/posts/:${PostId}?`
         const response = await fetch(url);
-        data = response.json();
+        const data = response.json();
         return data;
     }
 
     render () {
+        console.log(this.props);
         const { thisOnePost } = this.state;
         return (
             <div>
